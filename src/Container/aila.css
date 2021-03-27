@@ -1,0 +1,143 @@
+.image{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.justify-content-center {
+    -webkit-box-pack: center !important;
+    -ms-flex-pack: center !important;
+    justify-content: center !important;
+}
+
+.d-flex {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+}
+
+.ftco-no-pb {
+    padding-bottom: 0;
+}
+
+.ftco-section {
+    padding: 6em 0;
+    position: relative;
+}
+
+*, *::before, *::after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+section {
+    display: block;
+}
+
+.ftco-no-pb {
+    padding-bottom: 0;
+}
+.ftco-section {
+    padding: 6em 0;
+    position: relative;
+}
+article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+    display: block;
+}
+*, *::before, *::after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+user agent stylesheet
+section {
+    display: block;
+}
+body {
+    background: #fff;
+    font-size: 16px;
+    line-height: 1.8;
+    font-weight: 300;
+    color:gray ;
+    text-align:left;
+}
+
+.para{
+    text-align: justify;
+}
+.pb-5, .py-5 {
+    padding-bottom: 3rem !important;
+}
+.pt-5, .py-5 {
+    padding-top: 3rem !important;
+}
+.fadeInUp {
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+}
+
+.ftco-animated {
+    -webkit-animation-duration: .5s;
+    animation-duration: .5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.heading-section .subheading {
+    font-size: 18px;
+    display: inline-block;
+    margin-bottom: 0;
+    color: #b7472a;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: italic;
+    position: relative;
+    
+}
+
+@media (min-width: 768px){
+    .col-md-6 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+.mb-4{
+    color: black;
+    text-decoration: black;
+    margin-bottom: 1.5rem !important;
+    text-align: left;
+}
+h1, h2, h3, h4, h5, .h1, .h2, .h3, .h4, .h5 {
+    line-height: 1.5;
+    color: black;
+    font-weight: 400;
+}
+h2, .h2 {
+    font-size: 2rem;
+}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    color: inherit;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+*, *::before, *::after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+h2 {
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
