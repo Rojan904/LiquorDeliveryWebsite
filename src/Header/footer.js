@@ -12,10 +12,10 @@ class Footer extends Component{
       <div className="col-md-12 col-lg-4">
         <div className="dk-footer-box-info">
           <a href="index.html" className="footer-logo">
-            <img src="https://cdn.pixabay.com/photo/2016/11/07/13/04/yoga-1805784_960_720.png" alt="footer_logo" className="img-fluid" />
+            <img src="images/img_aila.png" style={{height:"200px"}} alt="footer_logo" className="img-fluid" />
           </a>
           <p className="footer-info-text">
-            Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum generator.
+           Aila is a new online liquor store which offers a wide range of beverages. We deliver liquors inside the Kathmandu valley. 
           </p>
           <div className="footer-social-link">
             <h3>Follow us</h3>
@@ -62,8 +62,8 @@ class Footer extends Component{
               </div>
               {/* End contact Icon */}
               <div className="contact-info">
-                <h3>Jaipur India</h3>
-                <p>5353 Road Avenue</p>
+                <h3>Kathmandu Nepal</h3>
+                <p>Mahankal, Bouddha</p>
               </div>
               {/* End Contact Info */}
             </div>
@@ -77,7 +77,7 @@ class Footer extends Component{
               </div>
               {/* End contact Icon */}
               <div className="contact-info">
-                <h3>95 711 9 5353</h3>
+                <h3>977 9861432303</h3>
                 <p>Give us a call</p>
               </div>
               {/* End Contact Info */}
@@ -132,14 +132,14 @@ class Footer extends Component{
                 <h3>Subscribe</h3>
                 <span className="animate-border border-black" />
               </div>
-              <p>{/* Don’t miss to subscribe to our new feeds, kindly fill the form below. */}
-                Reference site about Lorem Ipsum, giving information on its origins, as well.</p>
+              <p>
+               Subscribe our website and get a chance to win a bumper prize.</p>
               <form action="#">
                 <div className="form-row">
                   <div className="col dk-footer-form">
                     <input type="email" className="form-control" placeholder="Email Address" />
                     <button type="submit">
-                      <i className="fa fa-send" />
+                      <i className="fa fa-send send" />
                     </button>
                   </div>
                 </div>

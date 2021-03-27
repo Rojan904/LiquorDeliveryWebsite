@@ -7,6 +7,8 @@ import {Route} from 'react-router-dom'
 import Home from "./Home";
 import Product from "./Product";
 import AddProduct from "./AddProduct";
+import UpdateProduct from "./UpdateProduct";
+import Logout from "./Logout";
 
 class Container extends Component{
    
@@ -29,6 +31,9 @@ class Container extends Component{
                                 <Route path='/home' component={Home}/>
                                 <Route path='/product' component={Product}/>
                                 <Route path='/addProduct' component={AddProduct}/>
+                                {/* :id hold the id of specific product */}
+                                 <Route path='/updateProduct/:id' component={UpdateProduct}/>  
+                                 <Route path='/logout' component={Logout}/>
 
                         
                 </div>
