@@ -1,6 +1,15 @@
 .logo{
   color: #fff;
 }
+/* .navbar{
+  background: transparent;
+  position: absolute;
+  top: 35px;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  
+} */
 .nav-item active{
 color: white;
 }

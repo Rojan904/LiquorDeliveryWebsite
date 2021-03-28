@@ -1,6 +1,7 @@
 import axios from "axios";
 import { Component } from "react";
 import {Link} from 'react-router-dom';
+import './aila.css'
 class Product extends Component{
     state={
         products:[]
@@ -30,7 +31,7 @@ class Product extends Component{
     }
     render(){
         return(
-            <div className="container">
+            <div className="container-liquor">
                 <div className="row">
                     {
                         this.state.products.map((product)=>{
