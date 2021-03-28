@@ -43,9 +43,10 @@ class Product extends Component{
                                     <p>{product.ailaType}</p>
                                     <p>{product.ailaMl}</p>
                                     <p>{product.ailaPrice}</p>
-                                    <p><img src={"http://localhost:90/" + product.ailaImage}/></p>
+                                    <p><img src={'http://localhost:90/' + product.ailaImage} height="400px" width="300px"/></p>
                                 </div>
-                                <p><button onClick={this.deleteAila.bind(this,product._id)}>Delete</button></p>  bind for sending parameter
+                                {/* Bind is used for sending id as parameter */}
+                                <p><button onClick={this.deleteAila.bind(this,product._id)}>Delete</button></p>  
                                <p><Link to={"/updateProduct/" + product._id}>Update</Link></p>
                                 </div>
                             )
