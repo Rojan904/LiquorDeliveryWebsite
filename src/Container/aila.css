@@ -427,3 +427,236 @@ h1, h2, h3, h4, h5, .h1, .h2, .h3, .h4, .h5 {
     font-size: 15px;
     font-weight: 500;
 }
+
+
+
+/* About Us */
+
+.hero-wrap.hero-wrap-2 {
+    height: 400px !important;
+    position: relative;
+    background-position: 50% 0%;
+    width: 100%;
+    background-size: cover;
+     background-repeat: no-repeat;
+    background-position: center center;
+   
+}
+.hero-wrap {
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:top center;
+    position: relative;
+    z-index: 0;
+    height: 750px;
+   
+
+    
+    
+}
+
+
+
+
+.hero-wrap.hero-wrap-2 .slider-text {
+    height: 400px !important;
+}
+.hero-wrap .slider-text {
+    height: 750px;
+    position: relative;
+}
+.align-items-end {
+    -webkit-box-align: end !important;
+    -ms-flex-align: end !important;
+    align-items: flex-end !important;
+}
+.no-gutters {
+    margin-right: 0px;
+    margin-left: 0px;
+}
+.mb-5, .my-5 {
+    margin-bottom: 3rem !important;
+}
+
+@media (min-width: 768px)
+{.col-md-9 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 75%;
+    flex: 0 0 75%;
+    max-width: 75%;
+}}
+.no-gutters > .col, .no-gutters > [class*="col-"] {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.hero-wrap.hero-wrap-2 .slider-text .breadcrumbs {
+    font-size: 14px;
+    margin-bottom: 20px;
+    z-index: 99;
+    text-transform: uppercase;
+    font-weight: 500;
+  
+}
+.hero-wrap .slider-text p {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.9);
+}
+.mb-0, .my-0 {
+    margin-bottom: 0 !important;
+}
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+.hero-wrap.hero-wrap-2 .slider-text .breadcrumbs span {
+    color: rgba(255, 255, 255, 0.7);
+  
+}
+.mr-2, .mx-2 {
+    margin-right: 0.5rem !important;
+}
+a {
+    -webkit-transition: .3s all ease;
+    -o-transition: .3s all ease;
+    transition: .3s all ease;
+    color: #b7472a;
+    text-decoration: none;
+}
+a {
+  
+    text-decoration: none;
+    background-color: transparent;
+}
+.hero-wrap.hero-wrap-2 .slider-text .bread {
+    position: relative;
+    color: #fff !important;
+    font-size: 60px;
+    color: #fff;
+    line-height: 1.1;
+    font-weight: 400;
+}
+.container-fluid{
+    padding-left: 0px;
+    padding-right: 0px;
+    overflow: hidden;
+}
+.ftco-intro {
+    background: #b7472a;
+}
+.ftco-intro .intro {
+    z-index: 0;
+    position: relative;
+}
+.intro {
+    width: 100%;
+    background: #b7472a;
+    padding: 30px;
+}
+.intro .text {
+    color: rgba(255, 255, 255, 0.8);
+}
+.intro .text h2 {
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #fff;
+    text-align: left;
+}
+.text p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    text-align: left;
+}
+/* For blog */
+.heading-section h2 {
+    font-size: 30px;
+    font-weight: 700;
+}
+.align-items-stretch {
+    -webkit-box-align: stretch !important;
+    -ms-flex-align: stretch !important;
+    align-items: stretch !important;
+}
+
+@media (min-width: 992px)
+{.col-lg-6 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+}}
+
+@media (min-width: 768px)
+{.blog-entry {
+    margin-bottom: 30px;
+}}
+.blog-entry {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    z-index: 0;
+}
+.blog-entry .text {
+    position: relative;
+    margin: 0 auto;
+    z-index: 0;
+}
+.blog-entry .img, .blog-entry .text {
+    width: 50%;
+}
+.bg-light {
+    background: #f5f4f0 !important;
+}
+.p-4 {
+    padding: 1.5rem !important;
+}
+.blog-entry .meta p span {
+    padding-right: 10px;
+}
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.blog-entry .text .heading {
+    font-size: 22px;
+    margin-bottom: 0;
+    font-weight: 500;
+    font-style: italic;
+}
+.mb-3, .my-3 {
+    margin-bottom: 1rem !important;
+}
+.blog-entry .text .heading a {
+    color: #000000;
+   text-align: left;
+    text-decoration: none;
+}
+
+.blog-entry .btn-custom {
+    color: red;
+    font-style: italic;
+    font-weight: 700;
+}
+.blog-entry .btn-custom span {
+    font-size: 12px;
+}
+.block-20 {
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+    width: 100%;
+    z-index: -1;
+}

@@ -29,7 +29,8 @@ class Login extends Component{
     }
     render(){
         if(this.state.checkLogin===true){
-            return <Redirect to='/home'/>
+            // return <Redirect to='/home'/>
+            return window.location.href="/home"
         }
         return(
             <div>

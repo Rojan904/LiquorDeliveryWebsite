@@ -9,6 +9,7 @@ import Product from "./Product";
 import AddProduct from "./AddProduct";
 import UpdateProduct from "./UpdateProduct";
 import Logout from "./Logout";
+import About from "./About";
 
 class Container extends Component{
    
@@ -29,6 +30,8 @@ class Container extends Component{
                                 <Route path='/loginsignup' component={LoginSignUp}/>
 
                                 <Route path='/home' component={Home}/>
+                                
+                                <Route path='/about' component={About}/>
                                 <Route path='/product' component={Product}/>
                                 <Route path='/addProduct' component={AddProduct}/>
                                 {/* :id hold the id of specific product */}

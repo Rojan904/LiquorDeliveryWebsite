@@ -9,12 +9,15 @@ class Header extends Component {
     if(localStorage.getItem('token')){
       var menu=
       <Navbar className="navbar navbar-dark bg-dark" variant="black" expand="lg">
-      <Navbar.Brand href="#home" className="logo">Aila</Navbar.Brand>
+      <Navbar.Brand to="/home" className="logo">Aila</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
         <li className="nav-item ">
                    <Link className="nav-link" to="/home">Home <span className="sr-only">(current)</span></Link>
+                 </li>
+                 <li className="nav-item ">
+                   <Link className="nav-link" to="/about">About</Link>
                  </li>
                  <li className="nav-item">
                    <Link className="nav-link" to="/logout">Logout</Link>
@@ -43,6 +46,9 @@ class Header extends Component {
         <Nav className="mr-auto">
         <li className="nav-item ">
                    <Link className="nav-link" to="/home">Home <span className="sr-only">(current)</span></Link>
+                 </li>
+                 <li className="nav-item ">
+                   <Link className="nav-link" to="/about">About</Link>
                  </li>
                  <li className="nav-item">
                    <Link className="nav-link" to="/login">Features</Link>
