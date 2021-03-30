@@ -10,6 +10,7 @@ import AddProduct from "./AddProduct";
 import UpdateProduct from "./UpdateProduct";
 import Logout from "./Logout";
 import About from "./About";
+import Contact from "./Contact";
 
 class Container extends Component{
    
@@ -33,6 +34,7 @@ class Container extends Component{
                                 
                                 <Route path='/about' component={About}/>
                                 <Route path='/product' component={Product}/>
+                                <Route path='/contact' component={Contact}/>
                                 <Route path='/addProduct' component={AddProduct}/>
                                 {/* :id hold the id of specific product */}
                                  <Route path='/updateProduct/:id' component={UpdateProduct}/>  
