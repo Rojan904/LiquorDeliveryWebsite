@@ -21,7 +21,18 @@ class Login extends Component {
                 console.log(response);
                 localStorage.setItem('token', response.data.token)
                 localStorage.setItem('userType', response.data.userType)
-                this.setState({ checkLogin: true })
+
+                if(response.data.success===true){
+                    this.setState({ checkLogin: true })
+                }
+                else{
+                this.setState({ checkLogin: false })
+                alert(response.data.message)
+                this.setState({ username: "",
+                password: ""})
+                
+
+                }
             })
             .catch((err) => {
                 console.log(err.response)
@@ -36,7 +47,7 @@ class Login extends Component {
             <div>
                 <form>
                     <p>Username<input type="text" name="username" value={this.state.username} onChange={this.changeHandler} /></p>
-                    <p>Password<input type="password    " name="password" value={this.state.password} onChange={this.changeHandler} /></p>
+                    <p>Password<input type="password" name="password" value={this.state.password} onChange={this.changeHandler} /></p>
                     <p><input type="submit" onClick={this.submitLogin} /></p>
                 </form>
             </div>
