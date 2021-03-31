@@ -31,7 +31,7 @@ class Container extends Component{
                                 <Route path='/loginsignup' component={LoginSignUp}/>
 
                                 <Route path='/home' component={Home}/>
-                                
+                                  
                                 <Route path='/about' component={About}/>
                                 <Route path='/product' component={Product}/>
                                 <Route path='/contact' component={Contact}/>

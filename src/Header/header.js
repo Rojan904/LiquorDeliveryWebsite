@@ -6,7 +6,7 @@ import { Navbar, Nav, NavDropdown, Form, FormControl, Button } from "react-boots
 class Header extends Component {
 
   render() {
-    if(localStorage.getItem('token')){
+    if(localStorage.getItem('token') && localStorage.getItem('userType')==="Admin"){
       var menu=
       <Navbar className="navbar navbar-dark bg-dark" variant="black" expand="lg">
       <Navbar.Brand to="/home" className="logo">Aila</Navbar.Brand>
@@ -32,7 +32,7 @@ class Header extends Component {
                  <li className="nav-item">
                   <Link className="nav-link" to="/contact">Contact Us</Link>
                 </li>
-       
+              
         </Nav>
        
         
