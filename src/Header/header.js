@@ -13,21 +13,16 @@ class Header extends Component {
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
-        <li className="nav-item ">
-                   <Link className="nav-link" to="/home">Home <span className="sr-only">(current)</span></Link>
-                 </li>
-                 <li className="nav-item ">
-                   <Link className="nav-link" to="/about">About</Link>
-                 </li>
+        
                  <li className="nav-item">
                    <Link className="nav-link" to="/logout">Logout</Link>
                  </li>
 
                  <li className="nav-item">
-                  <Link className="nav-link" to="/product">Product</Link>
+                  <Link className="nav-link" to="/viewAila">View Product</Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/addProduct">AddProduct</Link>
+                  <Link className="nav-link" to="/addProduct">Add Product</Link>
                 </li>
               
               

@@ -11,6 +11,7 @@ import UpdateProduct from "./UpdateProduct";
 import Logout from "./Logout";
 import About from "./About";
 import Contact from "./Contact";
+import ViewAila from "./Admin/ViewAila";
 
 class Container extends Component{
    
@@ -39,6 +40,8 @@ class Container extends Component{
                                 {/* :id hold the id of specific product */}
                                  <Route path='/updateProduct/:id' component={UpdateProduct}/>  
                                  <Route path='/logout' component={Logout}/>
+
+                                 <Route path='/viewAila' component={ViewAila}/>
 
                         
                 </div>

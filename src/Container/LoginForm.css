@@ -45,7 +45,7 @@ span {
 	margin: 15px 0;
 }
 
-.form-container button,.overlay-container button  {
+.form-container button,.overlay-container button,.col-md-3 button  {
 	border-radius: 20px;
 	border: 1px solid #FF4B2B;
 	background-color: #FF4B2B;
