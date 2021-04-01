@@ -53,9 +53,9 @@ class ViewAila extends Component {
                             return (
                                 
                                     <div className="col-md-3 ">
-                                    <div className="product ftco-animate" style={{marginBottom:'0px'}}>
+                                    <div className="product ftco-animate fadeInUp ftco-animated" style={{marginBottom:'0px'}}>
                                     <div className="img d-flex align-items-center justify-content-center" >
-                                    <img src={'http://localhost:90/' + product.ailaImage.replace("\\", "/")} height="350px" width="300px" style={{display:'block',}}/>
+                                    <img src={'http://localhost:90/' + product.ailaImage.replace("\\", "/")} height="350px" width="280px" style={{borderRadius: '4px',position: 'relative',objectFit:'cover'}}/>
                                      </div>
                                      <div className="text text-center">
                                         <span className="category">{product.ailaType}</span>

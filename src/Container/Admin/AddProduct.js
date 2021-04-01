@@ -37,6 +37,12 @@ class AddProduct extends Component{
         
         .then((message)=>{
             console.log(message)
+            alert(message.data.message)
+            this.setState({ailaName:'',
+            ailaMl:'',
+            ailaPrice:'',
+            ailaType:'',
+            ailaImage:''})
         })
         .catch((error)=>{
             console.log(error.message)
