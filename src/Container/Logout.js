@@ -5,7 +5,7 @@ class Logout extends Component{
         localStorage.removeItem('token')
         localStorage.removeItem('userType')
 
-        window.location.href='/login';
+        window.location.href='/loginsignup';
     
     }
     render(){

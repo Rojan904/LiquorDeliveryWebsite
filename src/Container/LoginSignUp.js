@@ -24,9 +24,17 @@ class LoginSignUp extends Component{
       dob:"",
       username:"",
       email:"",
-      password:""
+      password:"",
+      checkLogin:false
 
   }
+  changeHandler = (e) => {
+    this.setState({
+        [e.target.name]: e.target.value
+    }
+
+    )
+}
 
   register=(err)=>{
       err.preventDefault()
@@ -39,16 +47,48 @@ class LoginSignUp extends Component{
           password:this.state.password
       }
       axios.post("http://localhost:90/register",userData)
-      .then(res=>{
-          console.log(res)
+      .then(response=>{
+          console.log(response)
+          alert(response.data.message)
+          this.setState({ username: "",
+          password: ""})
          
       })
       .catch(err=>{
           console.log(err)
+          
       })
 
   }
+  submitLogin = (e) => {
+    e.preventDefault();
+    axios.post("http://localhost:90/user/login", this.state)
+        .then((response) => {
+            console.log(response);
+            localStorage.setItem('token', response.data.token)
+            localStorage.setItem('userType', response.data.userType)
+
+            if(response.data.success===true){
+                this.setState({ checkLogin: true })
+            }
+            else{
+            this.setState({ checkLogin: false })
+            alert(response.data.message)
+            this.setState({ username: "",
+            password: ""})
+            
+
+            }
+        })
+        .catch((err) => {
+            console.log(err.response)
+        })
+}
     render(){
+      if (this.state.checkLogin === true) {
+        // return <Redirect to='/home'/>
+        return window.location.href = "/home"
+    }
         return(
          <div>
  
@@ -109,14 +149,14 @@ class LoginSignUp extends Component{
         <input type="text" placeholder="Username" 
         name="username" 
         value={this.state.username} 
-        onChange={(event)=>{this.setState({username:event.target.value})}}/>
+        onChange={this.changeHandler}/>
           
         <input type="password" placeholder="Password" 
         name="password" 
         value={this.state.password} 
-        onChange={(event)=>{this.setState({password:event.target.value})}}/>
+        onChange={this.changeHandler}/>
         <a href="#">Forgot your password?</a>
-        <button>Sign In</button>
+        <button onClick={this.submitLogin}>Sign In</button>
       </form>
     </div>
     <div className="overlay-container">
