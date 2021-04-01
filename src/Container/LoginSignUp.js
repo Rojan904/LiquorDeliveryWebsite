@@ -56,7 +56,7 @@ class LoginSignUp extends Component{
       })
       .catch(err=>{
           console.log(err)
-          
+          alert(response.data.message)
       })
 
   }
