@@ -1,7 +1,9 @@
 import { Component } from "react";
 import './LoginForm.css'
 import axios from 'axios'
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+toast.configure()
 class LoginSignUp extends Component{
     click=()=>{
     const signUpButton = document.getElementById('signUp');
@@ -49,7 +51,7 @@ class LoginSignUp extends Component{
       axios.post("http://localhost:90/register",userData)
       .then(response=>{
           console.log(response)
-          alert(response.data.message)
+          toast(response.data.message)
           this.setState({ username: "",
           password: ""})
          
@@ -73,7 +75,7 @@ class LoginSignUp extends Component{
             }
             else{
             this.setState({ checkLogin: false })
-            alert(response.data.message)
+            toast(response.data.message)
             this.setState({ username: "",
             password: ""})
             

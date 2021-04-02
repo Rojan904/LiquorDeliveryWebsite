@@ -1,6 +1,8 @@
 import axios from "axios";
 import { Component } from "react";
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+toast.configure()
 class AddProduct extends Component{
     state={
         ailaName:'',
@@ -37,7 +39,7 @@ class AddProduct extends Component{
         
         .then((message)=>{
             console.log(message)
-            alert(message.data.message)
+            toast(message.data.message)
             this.setState({ailaName:'',
             ailaMl:'',
             ailaPrice:'',

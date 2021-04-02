@@ -7,7 +7,7 @@ import {Route} from 'react-router-dom'
 import Home from "./Home";
 import Product from "./Product";
 import AddProduct from "./Admin/AddProduct";
-import UpdateProduct from "./UpdateProduct";
+import UpdateProduct from "./Admin/UpdateProduct";
 import Logout from "./Logout";
 import About from "./About";
 import Contact from "./Contact";
