@@ -52,7 +52,7 @@ class ViewAila extends Component {
                         this.state.products.map((product) => {
                             return (
                                 
-                                    <div className="col-md-3 ">
+                                    <div className="col-md-3 border">
                                     <div className="product ftco-animate fadeInUp ftco-animated" style={{marginBottom:'0px'}}>
                                     <div className="img d-flex align-items-center justify-content-center" >
                                     <img src={'http://localhost:90/' + product.ailaImage.replace("\\", "/")} height="350px" width="280px" style={{borderRadius: '4px',position: 'relative',objectFit:'cover'}}/>
