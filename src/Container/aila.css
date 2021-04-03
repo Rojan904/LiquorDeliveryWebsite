@@ -32,7 +32,7 @@
     -webkit-transition: all 0.3s ease;
     -ms-transition: all 0.3s ease;
     transition: all 0.3s ease;
-    opacity: 0;
+    
 }
 p {
     display: block;
@@ -329,23 +329,6 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
     position: relative;
 }
 
-.product .img:after {
-    z-index: -1;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    content: '';
-    background: #000000;
-    opacity: 0;
-    border-radius: 4px;
-    -moz-transition: all 0.6s ease;
-    -o-transition: all 0.6s ease;
-    -webkit-transition: all 0.6s ease;
-    -ms-transition: all 0.6s ease;
-    transition: all 0.6s ease;
-}
 .d-flex {
     display: -webkit-box !important;
     display: -ms-flexbox !important;
@@ -1076,3 +1059,46 @@ ol, ul, dl {
 .bg-dark{
     margin-top: 20px;
 }
+
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  .product:hover .view {
+    opacity: 0.3;
+    z-index: -1;
+    position: absolute;
+    background: #000000;
+    border-radius: 4px;
+    transition: all 0.6s ease;
+
+  }
+  
+  .product:hover .middle {
+    opacity: 1;
+  }
+  
+.product .img:after {
+  
+    opacity: 0;
+    border-radius: 4px;
+    -moz-transition: all 0.6s ease;
+    -o-transition: all 0.6s ease;
+    -webkit-transition: all 0.6s ease;
+    -ms-transition: all 0.6s ease;
+    transition: all 0.6s ease;
+}
+  
+  .middle .text {
+    color: white;
+    font-size: 16px;
+    width: 100%;
+    padding: 16px 32px;
+  }
