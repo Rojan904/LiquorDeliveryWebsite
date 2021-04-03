@@ -62,6 +62,11 @@ class Product extends Component {
 
         <section className="ftco-section">
           <div className="container-liquor">
+          <div className="row justify-content-center pb-5">
+              <div className="col-md-4 heading-section text-center ftco-animate">
+                <h2>Our Products</h2>
+              </div>
+            </div>
             <div className="row">
               <div className="col-md-9">
 
@@ -74,7 +79,7 @@ class Product extends Component {
                             <div className="img d-flex align-items-center justify-content-center" >
                               <img src={'http://localhost:90/' + product.ailaImage.replace("\\", "/")} class="view" height="100%" width="270px" style={{ borderRadius: '4px', position: 'relative', objectFit: 'fill' }} />
                               <div class="middle" >
-                                <div class="text"><button>View</button></div>
+                                <div class="text"><Link to={"/viewProduct/" + product._id}><button>View</button></Link></div>
                               </div>
                             </div>
                             <div className="text text-center">
@@ -112,29 +117,6 @@ class Product extends Component {
             </div>
           </div>
         </section>
-
-
-        <div className="row">
-          {
-            this.state.products.map((product) => {
-              return (
-                <div>
-                  <div className="col-md-3">
-                    <p>{product.ailaName}</p>
-                    <p>{product.ailaType}</p>
-                    <p>{product.ailaMl}</p>
-                    <p>{product.ailaPrice}</p>
-                    <p><img src={'http://localhost:90/' + product.ailaImage.replace("\\", "/")} height="400px" width="300px" /></p>
-                  </div>
-                  {/* Bind is used for sending id as parameter */}
-                  <p><button onClick={this.deleteAila.bind(this, product._id)}>Delete</button></p>
-                  <p><Link to={"/updateProduct/" + product._id}>Update</Link></p>
-                </div>
-              )
-            })
-          }
-
-        </div>
 
       </div>
     )

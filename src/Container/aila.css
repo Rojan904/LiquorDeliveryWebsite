@@ -1102,3 +1102,13 @@ ol, ul, dl {
     width: 100%;
     padding: 16px 32px;
   }
+  .col-md-6 p{
+      text-align: left; 
+
+  }
+  .pl-0, .table td {
+      text-align: left;
+  }
+  .col-md-6 button{
+      float: left;
+  }

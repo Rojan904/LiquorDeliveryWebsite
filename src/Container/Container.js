@@ -12,6 +12,7 @@ import Logout from "./Logout";
 import About from "./About";
 import Contact from "./Contact";
 import ViewAila from "./Admin/ViewAila";
+import ViewProductDetails from "./ViewProductDetails";
 
 class Container extends Component{
    
@@ -42,6 +43,7 @@ class Container extends Component{
                                  <Route path='/logout' component={Logout}/>
 
                                  <Route path='/viewAila' component={ViewAila}/>
+                                 <Route path='/viewProduct/:id' component={ViewProductDetails}/>  
 
                         
                 </div>
