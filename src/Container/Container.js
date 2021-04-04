@@ -14,6 +14,7 @@ import Contact from "./Contact";
 import ViewAila from "./Admin/ViewAila";
 import ViewProductDetails from "./ViewProductDetails";
 import Cart from "./Cart";
+import Checkout from "./Checkout";
 
 class Container extends Component{
    
@@ -46,7 +47,7 @@ class Container extends Component{
                                  <Route path='/viewAila' component={ViewAila}/>
                                  <Route path='/cart' component={Cart}/>
                                  <Route path='/viewProduct/:id' component={ViewProductDetails}/>  
-
+                                <Route path='/checkout' component={Checkout}/>
                         
                 </div>
             </div>

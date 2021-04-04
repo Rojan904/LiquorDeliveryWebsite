@@ -1115,7 +1115,7 @@ ol, ul, dl {
   .table-wrap {
     overflow-x: scroll;
 }
-.table {
+.table one{
     min-width: 1000px !important;
     width: 100%;
     background: #fff;
@@ -1123,20 +1123,17 @@ ol, ul, dl {
     -moz-box-shadow: 0px 5px 12px -12px rgba(0, 0, 0, 0.29);
     box-shadow: 0px 5px 12px -12px rgb(0 0 0 / 29%);
 }
-.table {
+.table one{
     width: 100%;
     margin-bottom: 1rem;
     background-color: transparent;
 }
-table {
+table one {
     border-collapse: collapse;
 }
-*, *::before, *::after {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
+
 user agent stylesheet
-table {
+table one{
     display: table;
     border-collapse: separate;
     box-sizing: border-box;
@@ -1149,12 +1146,12 @@ table {
     border-radius: 4px;
 }
 
-thead {
+.thead-primary one {
     display: table-header-group;
     vertical-align: middle;
     border-color: inherit;
 }
-table {
+table one{
     border-collapse: collapse;
 }
 tr {
@@ -1187,13 +1184,13 @@ tbody {
     border: 1px solid transparent;
     border-radius: 0.25rem;
 }
-.table tbody th, .table tbody td {
+.tableone tbody th, .tableone tbody td {
     border: none;
     padding: 30px;
     border-bottom: 4px solid #f8f9fd;
     vertical-align: middle;
 }
-.table th {
+.tableone th {
     padding: 2rem;
     vertical-align: top;
     border-top: 1px solid #dee2e6;
@@ -1270,4 +1267,10 @@ button.close {
     color: #000000;
     font-weight: 600;
     font-size: 14px;
+}
+
+.d-flex span {
+    display: block;
+    width: 90%;
+    color: #000000;
 }

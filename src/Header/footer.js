@@ -12,14 +12,14 @@ class Footer extends Component{
       <div className="col-md-12 col-lg-4">
         <div className="dk-footer-box-info">
           <a href="index.html" className="footer-logo">
-            <img src="images/img_aila.png" style={{height:"200px"}} alt="footer_logo" className="img-fluid" />
+            <img src="images/img_aila.png" style={{height:"200px",marginTop:'20px'}} alt="footer_logo" className="img-fluid" />
           </a>
           <p className="footer-info-text">
            Aila is a new online liquor store which offers a wide range of beverages. We deliver liquors inside the Kathmandu valley. 
           </p>
           <div className="footer-social-link">
             <h3>Follow us</h3>
-            <ul>
+            <ul style={{textAlign:'center'}}>
               <li>
                 <a href="#">
                   <i className="fa fa-facebook" />

@@ -12,8 +12,10 @@ class ViewProductDetails extends Component {
         ailaQty:"",
         config: {
             headers: { 'authorization': `Bearer ${localStorage.getItem('token')}` }
+            
         }
     }
+    
     changeHandler = (e) => {
         this.setState({
             [e.target.name]: e.target.value
@@ -35,17 +37,7 @@ class ViewProductDetails extends Component {
             .catch((err) => {
                 console.log(err.message)
             })
-            axios.post('http://localhost:90/user/login') //backend ma id pathako
-            .then((allAila) => {
-                console.log(allAila)
-                this.setState({
-                    userid: allAila.data._id
-                })
-            })
-            .catch((err) => {
-                console.log(err.message)
-            })
-
+           
 
     }
     addAila=(e)=>{
@@ -53,9 +45,10 @@ class ViewProductDetails extends Component {
             [e.target.name]:e.target.value  //name is of input name
         })
     }
-    addToCart=(err)=>{
-        err.preventDefault()
+    addToCart=(err,ailaId)=>{
+       
         const cartData={
+           
             ailaName:this.state.ailaName,
             ailaMl:this.state.ailaMl,
             ailaPrice:this.state.ailaPrice,
@@ -64,9 +57,10 @@ class ViewProductDetails extends Component {
             ailaQty:this.state.ailaQty
             
         }
-        axios.post("http://localhost:90/add/cart",cartData)
+        axios.post("http://localhost:90/add/cart/"+ ailaId,this.state.config)
         .then(response=>{
             console.log(response)
+            console.log(this.state.config)
            
         })
         .catch(err=>{
@@ -149,6 +143,8 @@ class ViewProductDetails extends Component {
                         </div>
                     </div>
                 </section>
+
+                
 
             </div>
         )

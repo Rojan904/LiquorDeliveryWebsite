@@ -1,5 +1,5 @@
 import { Component } from "react";
-
+import { Link } from 'react-router-dom';
 class Cart extends Component {
     render() {
         return (
@@ -19,9 +19,9 @@ class Cart extends Component {
                <section className="ftco-section">
   <div className="container-liquor">
     <div className="row">
-      <div className="table-wrap">
-        <table className="table">
-          <thead className="thead-primary">
+      <div className="table-wrap one">
+        <table className="table tableone">
+          <thead className="thead-primary one">
             <tr>
               <th>&nbsp;</th>
               <th>&nbsp;</th>
@@ -147,7 +147,9 @@ class Cart extends Component {
             <span>$17.60</span>
           </p>
         </div>
-        <p className="text-center"><a href="checkout.html" className="btn btn-primary py-3 px-4">Proceed to Checkout</a></p>
+        <p className="text-center"><Link to={"/checkout"}>
+          <a href="checkout.html" className="btn btn-primary py-3 px-4">Proceed to Checkout</a></Link>
+          </p>
       </div>
     </div>
   </div>
