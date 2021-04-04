@@ -8,6 +8,8 @@ class ViewProductDetails extends Component {
         ailaType: "",
         ailaImage:"",
         id: this.props.match.params.id,  //url ko id taneko 
+        userid:"",
+        ailaQty:"",
         config: {
             headers: { 'authorization': `Bearer ${localStorage.getItem('token')}` }
         }
@@ -27,11 +29,52 @@ class ViewProductDetails extends Component {
                     ailaType: message.data.ailaType,
                     ailaImage:message.data.ailaImage
 
+
                 })
             })
             .catch((err) => {
                 console.log(err.message)
             })
+            axios.post('http://localhost:90/user/login') //backend ma id pathako
+            .then((allAila) => {
+                console.log(allAila)
+                this.setState({
+                    userid: allAila.data._id
+                })
+            })
+            .catch((err) => {
+                console.log(err.message)
+            })
+
+
+    }
+    addAila=(e)=>{
+        this.setState({
+            [e.target.name]:e.target.value  //name is of input name
+        })
+    }
+    addToCart=(err)=>{
+        err.preventDefault()
+        const cartData={
+            ailaName:this.state.ailaName,
+            ailaMl:this.state.ailaMl,
+            ailaPrice:this.state.ailaPrice,
+            ailaType:this.state.ailaType,
+            ailaImage:this.state.ailaImage,
+            ailaQty:this.state.ailaQty
+            
+        }
+        axios.post("http://localhost:90/add/cart",cartData)
+        .then(response=>{
+            console.log(response)
+           
+        })
+        .catch(err=>{
+            console.log(err)
+            
+        })
+
+
     }
     render() {
         return (
@@ -87,7 +130,7 @@ class ViewProductDetails extends Component {
                                                     <td className="pl-0">
                                                         <div className="def-number-input number-input safari_only mb-0">
                                                             {/* <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" className="minus" >-</button> */}
-                                                            <input className="quantity" min={1} name="quantity" defaultValue={1} type="number" />
+                                                            <input className="quantity" min={1} name="ailaQty" defaultValue={1} type="number" value={this.state.ailaQty} onChange={this.addAila}></input>
                                                             {/* <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" className="plus" >+</button> */}
                                                         </div>
                                                     </td>
@@ -98,7 +141,7 @@ class ViewProductDetails extends Component {
                                     </div>
                                     <div>
                                         <button type="button" className="btn btn-primary btn-md mr-1 mb-2">Buy now</button>
-                                        <button type="button" className="btn btn-light btn-md mr-1 mb-2"><i className="fa fa-shopping-cart pr-2" />Add to cart</button>
+                                        <button type="button" className="btn btn-light btn-md mr-1 mb-2" onClick={this.addToCart}><i className="fa fa-shopping-cart pr-2" />Add to cart</button>
                                     </div>
                                 </div>
 

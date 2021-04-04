@@ -1112,3 +1112,162 @@ ol, ul, dl {
   .col-md-6 button{
       float: left;
   }
+  .table-wrap {
+    overflow-x: scroll;
+}
+.table {
+    min-width: 1000px !important;
+    width: 100%;
+    background: #fff;
+    -webkit-box-shadow: 0px 5px 12px -12px rgb(0 0 0 / 29%);
+    -moz-box-shadow: 0px 5px 12px -12px rgba(0, 0, 0, 0.29);
+    box-shadow: 0px 5px 12px -12px rgb(0 0 0 / 29%);
+}
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    background-color: transparent;
+}
+table {
+    border-collapse: collapse;
+}
+*, *::before, *::after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+user agent stylesheet
+table {
+    display: table;
+    border-collapse: separate;
+    box-sizing: border-box;
+    text-indent: initial;
+    border-spacing: 2px;
+    border-color: grey;
+}
+.table thead.thead-primary {
+    background: #7E57C2;
+    border-radius: 4px;
+}
+
+thead {
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+table {
+    border-collapse: collapse;
+}
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+th {
+    text-align: inherit;
+}
+
+th {
+    display: table-cell;
+    vertical-align: inherit;
+    font-weight: bold;
+    text-align: -internal-center;
+}
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+.table tbody tr {
+    margin-bottom: 10px;
+}
+.alert {
+    position: relative;
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+}
+.table tbody th, .table tbody td {
+    border: none;
+    padding: 30px;
+    border-bottom: 4px solid #f8f9fd;
+    vertical-align: middle;
+}
+.table th {
+    padding: 2rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+    color: white;
+    text-align: left;
+}
+
+.checkbox-wrap input {
+    position: absolute;
+    cursor: pointer;
+    height: auto;
+  
+}
+
+.checkbox-wrap {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    user-select: none;
+}
+.table tbody td .img {
+    width: 70px;
+    height: 80px;
+}
+.table tbody td .email span:first-child {
+    font-weight: 500;
+    font-size: 20px;
+    color: #000000;
+}
+.table tbody td .email span {
+    display: block;
+}
+.table tbody td .email span:last-child {
+    color: rgba(0, 0, 0, 0.3);
+}
+.table tbody td .email span {
+    display: block;
+}
+.table tbody td.quantity {
+    width: 10%;
+}
+.close:not(:disabled):not(.disabled) {
+    cursor: pointer;
+}
+button.close {
+    padding: 0;
+    background-color: transparent;
+    border: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+.close {
+    float: right;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .5;
+}
+.cart-total p {
+    width: 100%;
+    display: block;
+}
+.cart-total p span {
+    display: block;
+    width: 30%;
+    color: #000000;
+}
+.cart-total p.total-price span:last-child {
+    color: #000000;
+    font-weight: 600;
+    font-size: 14px;
+}
