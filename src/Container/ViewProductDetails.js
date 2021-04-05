@@ -46,7 +46,6 @@ class ViewProductDetails extends Component {
     addToCart=(err)=>{
        
         const cartData={
-           
             ailaName:this.state.ailaName,
             ailaMl:this.state.ailaMl,
             ailaPrice:this.state.ailaPrice,

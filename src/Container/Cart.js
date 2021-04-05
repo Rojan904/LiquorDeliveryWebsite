@@ -47,7 +47,7 @@ class Cart extends Component {
               <th>&nbsp;</th>
               <th>&nbsp;</th>
               <th>Product</th>
-              <th>Price</th>
+              <th>Price (Rs.)</th>
               <th>Quantity</th>
               <th>Total</th>
               <th>&nbsp;</th>
@@ -65,7 +65,9 @@ class Cart extends Component {
                 </label>
               </td>
               <td>
-                <div className="img" style={{backgroundImage: 'url(images/prod-1.jpg)'}} />
+                <div className="img" >
+                  <img src={'http://localhost:90/'+product.ailaId.ailaImage} height="120px" width="100px"/>
+                </div>
               </td>
               <td>
                 <div className="email">
@@ -76,16 +78,17 @@ class Cart extends Component {
               <td>{product.ailaId.ailaPrice}</td>
               <td className="quantity">
                 <div className="input-group">
-                  <input type="text" name="quantity" className="quantity form-control input-number" defaultValue={2} min={1} max={100} />
+                  <input type="text" name="quantity" className="quantity form-control input-number" defaultValue={product.ailaQty} min={1} max={100} ></input>
                 </div>
               </td>
-              <td>$89.98</td>
+              <td>{product.ailaPrice}</td>
               <td>
                 <button type="button" className="close" data-dismiss="alert" aria-label="Close">
                   <span aria-hidden="true"><i className="fa fa-close" /></span>
                 </button>
               </td>
             </tr>
+           
                 )
               })
             }
@@ -99,26 +102,7 @@ class Cart extends Component {
     </div>
     <div className="row justify-content-end">
       <div className="col col-lg-5 col-md-6 mt-5 cart-wrap ftco-animate">
-        <div className="cart-total mb-3" style={{padding: '20px'}}> 
-          <h3>Cart Totals</h3>
-          <p className="d-flex">
-            <span>Subtotal</span>
-            <span>$20.60</span>
-          </p>
-          <p className="d-flex">
-            <span>Delivery</span>
-            <span>$0.00</span>
-          </p>
-          <p className="d-flex">
-            <span>Discount</span>
-            <span>$3.00</span>
-          </p>
-          <hr />
-          <p className="d-flex total-price">
-            <span>Total</span>
-            <span>$17.60</span>
-          </p>
-        </div>
+        
         <p className="text-center"><Link to={"/checkout"}>
           <a href="checkout.html" className="btn btn-primary py-3 px-4">Proceed to Checkout</a></Link>
           </p>
@@ -126,9 +110,6 @@ class Cart extends Component {
     </div>
   </div>
 </section>
-
-
-
             </div>
         )
     }
