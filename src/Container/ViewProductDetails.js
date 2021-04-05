@@ -16,6 +16,7 @@ class ViewProductDetails extends Component {
         }
     }
     
+    
     changeHandler = (e) => {
         this.setState({
             [e.target.name]: e.target.value
@@ -46,6 +47,7 @@ class ViewProductDetails extends Component {
     addToCart=(err)=>{
        
         const cartData={
+
             ailaName:this.state.ailaName,
             ailaMl:this.state.ailaMl,
             ailaPrice:this.state.ailaPrice,
