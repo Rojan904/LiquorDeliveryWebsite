@@ -21,7 +21,7 @@ class Login extends Component {
                 console.log(response);
                 localStorage.setItem('token', response.data.token)
                 localStorage.setItem('userType', response.data.userType)
-
+                console.log(response.data)
                 if(response.data.success===true){
                     this.setState({ checkLogin: true })
                 }

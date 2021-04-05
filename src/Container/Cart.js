@@ -1,6 +1,27 @@
 import { Component } from "react";
 import { Link } from 'react-router-dom';
+import axios from 'axios'
 class Cart extends Component {
+  state={
+    products:[],
+    config: {
+      headers: { 'authorization': `Bearer ${localStorage.getItem('token')}` }
+      
+  }
+  }
+  componentDidMount() {   //page load hudei run hune function
+    axios.get("http://localhost:90/cart/all",this.state.config)
+      .then((allAila) => {
+        console.log(allAila)
+        this.setState({
+          products: allAila.data.data
+        })
+      })
+      .catch((err) => {
+        console.log(err.response)
+      }
+      )
+  }
     render() {
         return (
             <div>
@@ -33,7 +54,10 @@ class Cart extends Component {
             </tr>
           </thead>
           <tbody>
-            <tr className="alert" role="alert">
+            {
+              this.state.products.map((product) => {
+                return(
+<tr className="alert" role="alert">
               <td>
                 <label className="checkbox-wrap checkbox-primary">
                   <input type="checkbox" defaultChecked />
@@ -45,11 +69,11 @@ class Cart extends Component {
               </td>
               <td>
                 <div className="email">
-                  <span>Jim Beam Kentucky Straight</span>
+                  <span>{product.ailaId.ailaName}</span>
                   <span>Fugiat voluptates quasi nemo, ipsa perferendis</span>
                 </div>
               </td>
-              <td>$44.99</td>
+              <td>{product.ailaId.ailaPrice}</td>
               <td className="quantity">
                 <div className="input-group">
                   <input type="text" name="quantity" className="quantity form-control input-number" defaultValue={2} min={1} max={100} />
@@ -62,64 +86,12 @@ class Cart extends Component {
                 </button>
               </td>
             </tr>
-            <tr className="alert" role="alert">
-              <td>
-                <label className="checkbox-wrap checkbox-primary">
-                  <input type="checkbox" />
-                  <span className="checkmark" />
-                </label>
-              </td>
-              <td>
-                <div className="img" style={{backgroundImage: 'url(images/prod-2.jpg)'}} />
-              </td>
-              <td>
-                <div className="email">
-                  <span>Jim Beam Kentucky Straight</span>
-                  <span>Fugiat voluptates quasi nemo, ipsa perferendis</span>
-                </div>
-              </td>
-              <td>$30.99</td>
-              <td className="quantity">
-                <div className="input-group">
-                  <input type="text" name="quantity" className="quantity form-control input-number" defaultValue={1} min={1} max={100} />
-                </div>
-              </td>
-              <td>$30.99</td>
-              <td>
-                <button type="button" className="close" data-dismiss="alert" aria-label="Close">
-                  <span aria-hidden="true"><i className="fa fa-close" /></span>
-                </button>
-              </td>
-            </tr>
-            <tr className="alert" role="alert">
-              <td>
-                <label className="checkbox-wrap checkbox-primary">
-                  <input type="checkbox" />
-                  <span className="checkmark" />
-                </label>
-              </td>
-              <td>
-                <div className="img" style={{backgroundImage: 'url(images/prod-3.jpg)'}} />
-              </td>
-              <td>
-                <div className="email">
-                  <span>Jim Beam Kentucky Straight</span>
-                  <span>Fugiat voluptates quasi nemo, ipsa perferendis</span>
-                </div>
-              </td>
-              <td>$35.50</td>
-              <td className="quantity">
-                <div className="input-group">
-                  <input type="text" name="quantity" className="quantity form-control input-number" defaultValue={1} min={1} max={100} />
-                </div>
-              </td>
-              <td>$35.50</td>
-              <td>
-                <button type="button" className="close" data-dismiss="alert" aria-label="Close">
-                  <span aria-hidden="true"><i className="fa fa-close" /></span>
-                </button>
-              </td>
-            </tr>
+                )
+              })
+            }
+            
+            
+           
            
           </tbody>
         </table>

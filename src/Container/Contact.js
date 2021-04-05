@@ -1,6 +1,20 @@
 import { Component } from "react";
 
 class Contact extends Component{
+  state={
+    fullName:"",
+    subject:"",
+    email:"",
+    message:"",
+    
+}
+changeHandler = (e) => {
+  this.setState({
+      [e.target.name]: e.target.value
+  }
+
+  )
+}
     render(){
         return(
             <div>
@@ -72,25 +86,33 @@ class Contact extends Component{
                     <div className="col-md-6">
                       <div className="form-group">
                         <label className="label" htmlFor="name">Full Name</label>
-                        <input type="text" className="form-control" name="name" id="name" placeholder="Name" />
+                        <input type="text" className="form-control" name="fullName" id="name" placeholder="Name"
+                         value={this.state.fullName} 
+                         onChange={this.changeHandler} />
                       </div>
                     </div>
                     <div className="col-md-6"> 
                       <div className="form-group">
                         <label className="label" htmlFor="email">Email Address</label>
-                        <input type="email" className="form-control" name="email" id="email" placeholder="Email" />
+                        <input type="email" className="form-control" name="email" id="email" placeholder="Email"
+                         value={this.state.email} 
+                         onChange={this.changeHandler} />
                       </div>
                     </div>
                     <div className="col-md-12">
                       <div className="form-group">
                         <label className="label" htmlFor="subject">Subject</label>
-                        <input type="text" className="form-control" name="subject" id="subject" placeholder="Subject" />
+                        <input type="text" className="form-control" name="subject" id="subject" placeholder="Subject"
+                         value={this.state.subject} 
+                         onChange={this.changeHandler} />
                       </div>
                     </div>
                     <div className="col-md-12">
                       <div className="form-group">
                         <label className="label" htmlFor="#">Message</label>
-                        <textarea name="message" className="form-control" id="message" cols={30} rows={4} placeholder="Message" defaultValue={""} />
+                        <textarea name="message" className="form-control" id="message" cols={30} rows={4} placeholder="Message" defaultValue={""} 
+                         value={this.state.message} 
+                         onChange={this.changeHandler}/>
                       </div>
                     </div>
                     <div className="col-md-12">

@@ -30,8 +30,6 @@ class ViewProductDetails extends Component {
                     ailaPrice: message.data.ailaPrice,
                     ailaType: message.data.ailaType,
                     ailaImage:message.data.ailaImage
-
-
                 })
             })
             .catch((err) => {
@@ -45,7 +43,7 @@ class ViewProductDetails extends Component {
             [e.target.name]:e.target.value  //name is of input name
         })
     }
-    addToCart=(err,ailaId)=>{
+    addToCart=(err)=>{
        
         const cartData={
            
@@ -57,7 +55,8 @@ class ViewProductDetails extends Component {
             ailaQty:this.state.ailaQty
             
         }
-        axios.post("http://localhost:90/add/cart/"+ ailaId,this.state.config)
+        err.preventDefault()
+        axios.post("http://localhost:90/add/cart2/"+this.state.id,cartData,this.state.config)
         .then(response=>{
             console.log(response)
             console.log(this.state.config)
@@ -65,7 +64,7 @@ class ViewProductDetails extends Component {
         })
         .catch(err=>{
             console.log(err)
-            
+            console.log(this.state.config.headers.authorization)
         })
 
 
