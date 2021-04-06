@@ -1,6 +1,6 @@
 import { Component } from "react";
 import Register from './Register'
-import Login from './Login'
+
 import LoginSignUp from './LoginSignUp'
 
 import {Route} from 'react-router-dom'
@@ -15,6 +15,7 @@ import ViewAila from "./Admin/ViewAila";
 import ViewProductDetails from "./ViewProductDetails";
 import Cart from "./Cart";
 import Checkout from "./Checkout";
+import UpdateCart from "./UpdateCart";
 
 class Container extends Component{
    
@@ -30,7 +31,7 @@ class Container extends Component{
                         
                         
                             {/* //path of link and Register from above imported */}
-                                <Route path='/login' component={Login}/>  
+                              
 
                                 <Route path='/loginsignup' component={LoginSignUp}/>
 
@@ -42,6 +43,7 @@ class Container extends Component{
                                 <Route path='/addProduct' component={AddProduct}/>
                                 {/* :id hold the id of specific product */}
                                  <Route path='/updateProduct/:id' component={UpdateProduct}/>  
+                                 <Route path='/updateCart/:id' component={UpdateCart}/>  
                                  <Route path='/logout' component={Logout}/>
 
                                  <Route path='/viewAila' component={ViewAila}/>

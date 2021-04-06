@@ -27,27 +27,7 @@ class Cart extends Component {
       )
       
   }
-  updateAila = (e) => {
-    const data = {
-        id: this.props.match.params.id,
-        ailaQty: this.state.ailaQty
 
-    }
-    e.preventDefault();
-    axios.put('http://localhost:90/aila/update', data, this.state.config)
-        .then((response) => {
-            console.log(response)
-            this.setState({ ailaName: "",
-            ailaMl: "",
-            ailaPrice: "",
-            ailaType: "",})
-
-            toast(response.data.message)
-        })
-        .catch((err) => {
-            console.log(err.response)
-        })
-}
   deleteAila = (ailaId) => {
     axios.delete('http://localhost:90/cart/delete/' + ailaId)
         .then((message) => {
@@ -88,6 +68,7 @@ class Cart extends Component {
               <th>Quantity</th>
               <th>Total</th>
               <th>&nbsp;</th>
+              <th>&nbsp;</th>
             </tr>
           </thead>
           <tbody>
@@ -109,7 +90,7 @@ class Cart extends Component {
               <td>
                 <div className="email">
                   <span>{product.ailaId.ailaName}</span>
-                  <span>Fugiat voluptates quasi nemo, ipsa perferendis</span>
+                  <span>The following item is added to cart.</span>
                 </div>
               </td>
               <td>{product.ailaId.ailaPrice}</td>
@@ -119,6 +100,11 @@ class Cart extends Component {
                 </div>
               </td>
               <td id="price">{product.ailaPrice}</td>
+              <td>
+                <button type="button" className="close" data-dismiss="alert" aria-label="Close">
+                <Link to={"/updateCart/" + product._id}><span aria-hidden="true"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span></Link>
+                </button>
+              </td>
               <td>
                 <button type="button" className="close" data-dismiss="alert" aria-label="Close">
                   <span aria-hidden="true"><i className="fa fa-close" onClick={this.deleteAila.bind(this,product._id)}/></span>
