@@ -69,7 +69,7 @@ class LoginSignUp extends Component{
             console.log(response);
             localStorage.setItem('token', response.data.token)
             localStorage.setItem('userType', response.data.userType)
-
+            localStorage.setItem('id',response.data.id)
             if(response.data.success===true){
                 this.setState({ checkLogin: true })
             }

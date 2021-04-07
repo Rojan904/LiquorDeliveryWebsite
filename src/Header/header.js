@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 
 import { Navbar, Nav, NavDropdown, Form, FormControl, Button } from "react-bootstrap";
 
+const userId=localStorage.getItem('id')
 class Header extends Component {
 
   render() {
@@ -61,6 +62,11 @@ class Header extends Component {
                 <li className="nav-item">
                   <Link className="nav-link" to="/cart">Cart</Link>
                 </li>
+
+                <li className="nav-item">
+                  <Link className="nav-link" to={"/profile/"+ userId}>My Profile</Link>
+                </li>
+
               
         </Nav>
        
