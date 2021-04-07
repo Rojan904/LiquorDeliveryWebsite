@@ -9,6 +9,8 @@ class UpdateProduct extends Component {
         ailaMl: "",
         ailaPrice: "",
         ailaType: "",
+        ailaImage:"",
+        ailaUpdateImage:"",
         id: this.props.match.params.id,  //url ko id taneko 
         config: {
             headers: { 'authorization': `Bearer ${localStorage.getItem('token')}` }
@@ -19,6 +21,11 @@ class UpdateProduct extends Component {
             [e.target.name]: e.target.value
         })
     }
+    fileHandler = (e) => {
+        this.setState({
+            ailaUpdateImage: e.target.files[0]
+        })
+    }
     componentDidMount() {
         axios.get('http://localhost:90/aila/one/' + this.state.id) //backend ma id pathako
             .then((message) => {
@@ -27,6 +34,7 @@ class UpdateProduct extends Component {
                     ailaMl: message.data.ailaMl,
                     ailaPrice: message.data.ailaPrice,
                     ailaType: message.data.ailaType,
+                    ailaImage:message.data.ailaImage
 
                 })
             })
@@ -36,7 +44,7 @@ class UpdateProduct extends Component {
     }
 
     updateAila = (e) => {
-        const data = {
+        const ailadata = {
             id: this.props.match.params.id,
             ailaName: this.state.ailaName,
             ailaMl: this.state.ailaMl,
@@ -45,7 +53,7 @@ class UpdateProduct extends Component {
 
         }
         e.preventDefault();
-        axios.put('http://localhost:90/aila/update', data, this.state.config)
+        axios.put('http://localhost:90/aila/update', ailadata, this.state.config)
             .then((response) => {
                 console.log(response)
                 this.setState({ ailaName: "",
@@ -58,6 +66,18 @@ class UpdateProduct extends Component {
             .catch((err) => {
                 console.log(err.response)
             })
+            const data2= new FormData()
+            data2.append('ailaImage', this.state.ailaUpdateImage)
+     
+            // {}, this.state.config,
+            axios.put("http://localhost:90/aila/updateImage/" + this.state.id, data2)
+                .then(response => {
+                    console.log(response)
+                    // toast.success("Image Updated", { position: toast.POSITION.TOP_CENTER, autoClose: 3000 })
+                })
+                .catch(error => {
+                    console.log(error)
+                });    
     }
     render() {
         return (
@@ -100,6 +120,11 @@ class UpdateProduct extends Component {
                                         </div>
                                     </div>
 
+                                    <div className="col-md-12">
+                                        <div className="form-group">
+                                        <input type="file" name="ailaUpdateImage" onChange={this.fileHandler} />
+                                        </div>
+                                    </div>
 
                                     <div className="col-md-12">
                                         <div className="form-group">

@@ -17,6 +17,7 @@ import Cart from "./Cart";
 import Checkout from "./Checkout";
 import UpdateCart from "./UpdateCart";
 import ProfileDashboard from "./UserProfile/ProfileDashboard";
+import UpdateProfile from "./UserProfile/UpdateProfile";
 
 class Container extends Component{
    
@@ -45,6 +46,7 @@ class Container extends Component{
                                 {/* :id hold the id of specific product */}
                                  <Route path='/updateProduct/:id' component={UpdateProduct}/>  
                                  <Route path='/updateCart/:id' component={UpdateCart}/>  
+                                 <Route path='/updateProfile/:id' component={UpdateProfile}/> 
                                  <Route path='/logout' component={Logout}/>
                                 <Route path='/profile/:id' component={ProfileDashboard}/>
                                  <Route path='/viewAila' component={ViewAila}/>
