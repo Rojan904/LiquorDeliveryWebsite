@@ -11,7 +11,7 @@ class ProfileDashboard extends Component {
         lastName: "",
         dob: "",
         username: "",
-        email: "",  
+        email: "",
         id: this.props.match.params.id
     }
     changeHandler = (e) => {
@@ -20,7 +20,7 @@ class ProfileDashboard extends Component {
         })
     }
     //load initially with the load of webpage
-    componentDidMount(){
+    componentDidMount() {
         axios.get('http://localhost:90/user/single/' + this.state.id)
             .then((message) => {
                 console.log(message)
@@ -29,7 +29,7 @@ class ProfileDashboard extends Component {
                     lastName: message.data.lastName,
                     dob: message.data.dob,
                     email: message.data.email,
-                    username:message.data.username
+                    username: message.data.username
                 })
             })
             .catch((err) => {
@@ -52,10 +52,22 @@ class ProfileDashboard extends Component {
                                         <img className="card-img-top" src={"https://i.pinimg.com/originals/2a/df/fb/2adffbee6e939b2bd1e32ffa8c763308.jpg"} alt="Image Loading...." className="rounded-circle" height={300} style={{ width: '20rem' }} />
                                         <div className="mt-3">
                                             <h4>{this.state.firstName}</h4>
-                                            <Link to={'/updateProfile/'+ this.state.id}>
-                                                <button className="btn btn-success">Update</button>
+                                           
+                                            <div className="col-md-12">
+                                                <div className="form-group">
+                                                    <Link to='/cart'><button className="btn btn-outline-primary">Go to Cart</button></Link>
+                                                    
+
+                                                </div>
+                                            </div>
+                                            <div className="col-md-12">
+                                                <div className="form-group">
+                                                <Link to={'/updateProfile/' + this.state.id}>
+                                                <button className="btn btn-success">Update Profile</button>
                                             </Link>
-                                            <button className="btn btn-outline-primary">Goto Cart</button>
+
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -93,7 +105,7 @@ class ProfileDashboard extends Component {
                                             <h6 className="mx-auto">First Name</h6>
                                         </div>
                                         <div className="col-sm-9 text-secondary">
-                                          {this.state.firstName}
+                                            {this.state.firstName}
                                         </div>
 
                                     </div>
@@ -134,11 +146,11 @@ class ProfileDashboard extends Component {
                                         </div>
                                     </div>
                                     <hr />
-                                                                   
+
                                 </div>
                             </div>
-                            <div className="row gutters-sm" style={{marginTop:"20px"}}>
-                            <div className="col-sm-6 mb-3">
+                            <div className="row gutters-sm" style={{ marginTop: "20px" }}>
+                                <div className="col-sm-6 mb-3">
                                     <div className="card h-100">
                                         <div className="card-body">
                                             <h6 className="d-flex align-items-center mb-3"><i className="material-icons text-info mr-2">Assignment</i>Project Status</h6>
